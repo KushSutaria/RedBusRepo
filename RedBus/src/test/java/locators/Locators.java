@@ -16,6 +16,11 @@ final WebElement vseats=Locators.driver.findElement(By.xpath(id));
 return vseats;
 }
 
+public static WebElement HideBus() {
+	final WebElement hideSeats=Locators.driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[3]/div[3]/div[1]/div[2]/div/div[4]/div[2]"));
+	return hideSeats;
+}
+
 public static WebElement selectSeats() {
 final WebElement sseats=Locators.driver.findElement(By.xpath("//*[@id=\"rt_14842887\"]/div/div/div/div[3]/div[2]/div[2]/canvas"));
 return sseats;
@@ -114,7 +119,7 @@ public static WebElement Card_cvv() {
 	return db_cvv;
 }
 public static WebElement SaveCard() {
-	final WebElement save=Locators.driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[1]/div[4]/div/div[3]/div[2]/div[2]/div[2]/div/div[2]/label/div/input"));
+	final WebElement save=Locators.driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[1]/div[4]/div/div[3]/div[2]/div[2]/div[2]/div/div[2]/label/div"));
 	return save;
 }
 

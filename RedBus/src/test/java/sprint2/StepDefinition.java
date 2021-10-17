@@ -1,5 +1,6 @@
 package sprint2;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
@@ -30,16 +31,24 @@ System.out.println("second");
 public void user_is_booking_one_or_more_tickets() throws InterruptedException {
 try {
 System.out.println("user is booking ticket");
+Thread.sleep(2000);
+JavascriptExecutor executor=(JavascriptExecutor) Browser.driver;
+executor.executeScript("arguments[0].click()", Locators.HideBus());
+//Locators.HideBus().click();
 Thread.sleep(5000);
-Locators.viewSeats().click();
+//Locators.viewSeats().click();
+executor.executeScript("arguments[0].click()", Locators.viewSeats());
 System.out.println("done");
 System.out.println("select the seat");
 Thread.sleep(5000);
-Locators.checkboxBoarding().click();
+executor.executeScript("arguments[0].click()", Locators.checkboxBoarding());
+//Locators.checkboxBoarding().click();
 Thread.sleep(2000);
-Locators.DroppingPointText().click();
+//Locators.DroppingPointText().click();
+executor.executeScript("arguments[0].click()", Locators.DroppingPointText());
 Thread.sleep(3000);
-Locators.checkboxDropping().click();
+//Locators.checkboxDropping().click();
+executor.executeScript("arguments[0].click()", Locators.checkboxDropping());
 System.out.println("done");
 }
 catch (Exception e) {
@@ -73,7 +82,7 @@ System.out.println(e);
 @Then("the browser displays fare details")
 public void the_browser_displays_fare_details() {
 	try {
-System.out.println("Fare is: $10");
+System.out.println("Fare is: $x");
 	}
 catch (Exception e) {
 System.out.println(e);
@@ -84,9 +93,10 @@ System.out.println(e);
 public void user_is_filling_passenge_details_form() throws Exception {
 	try {
 System.out.println("user is filling the form...");
-Locators.Proceed2BookButton().click();
+JavascriptExecutor executor=(JavascriptExecutor) Browser.driver;
+executor.executeScript("arguments[0].click()", Locators.Proceed2BookButton());
+//Locators.Proceed2BookButton().click();
 Thread.sleep(3000);
-//Locators.PassengerName().sendKeys(Read.readExcel(0, 1));
 Locators.PassengerName().sendKeys(Read.readExcel(0, 1));
 Locators.PassengerGender().click();
 Locators.PassengerAge().sendKeys(Read.readExcel(1, 1));
@@ -105,7 +115,9 @@ public void user_clicks_on_a_proceed_to_pay_button() {
 	try {
 System.out.println("user filled the form with correct info");
 System.out.println(Locators.ProceedToPayButton().getText());
-Locators.ProceedToPayButton().click();
+JavascriptExecutor executor=(JavascriptExecutor) Browser.driver;
+executor.executeScript("arguments[0].click()", Locators.ProceedToPayButton());
+//Locators.ProceedToPayButton().click();
 System.out.println("user clicked on proceed to pay");
 	}
 	catch (Exception e) {
@@ -181,12 +193,14 @@ System.out.println(e);
 public void user_is_entering_the_card_details() throws Exception {
 	try {
 	System.out.println("Entering card details...");
-	Locators.DebitCheck().click();
+	Thread.sleep(2000);
+	JavascriptExecutor executor=(JavascriptExecutor) Browser.driver;
+	executor.executeScript("arguments[0].click()", Locators.DebitCheck());
+	//Locators.DebitCheck().click();
 	Thread.sleep(2000);
 	Locators.Card_number().sendKeys(Read.readExcel(7, 1));
 	Locators.Card_name().sendKeys(Read.readExcel(8, 1));
 	Locators.Card_cvv().sendKeys(Read.readExcel(9, 1));
-//	new Actions(Locators.Card_expiryDate_month().sendKeys("01")).build().perform();
 	Locators.Card_expiryDate_month().sendKeys(Read.readExcel(11, 1), Keys.ENTER);
 	Locators.Card_expiryDate_year().sendKeys(Read.readExcel(12, 1), Keys.ENTER);
 	}
@@ -208,7 +222,10 @@ System.out.println(e);
 @When("the user selects {string} button")
 public void the_user_selects_button(String string) {
 	try {
-	Locators.SaveCard().click();
+	JavascriptExecutor executor= (JavascriptExecutor) Browser.driver;
+	executor.executeScript("arguments[0].click()", Locators.SaveCard());
+
+	//Locators.SaveCard().click();
 	}
 	catch (Exception e) {
 System.out.println(e);

@@ -1,0 +1,119 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-10-17T07:36:10.883Z",
+        "line": 2,
+        "name": "To verify the user can save the card for the future;",
+        "description": "",
+        "id": "book-a-ticket;to-verify-the-user-can-save-the-card-for-the-future;",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NoClassDefFoundError: org/openqa/selenium/chrome/ChromeDriver\r\n\tat browser.Browser.setDriver(Browser.java:20)\r\n\tat sprint2.StepDefinition.a_user_is_on_redbus_site(StepDefinition.java:30)\r\n\tat ✽.a user is on redbus site(file:///C:/Users/kshailes/eclipse-workspace/RedBus/src/test/resources/Features/Cards.feature:3)\r\n",
+              "status": "failed"
+            },
+            "line": 3,
+            "name": "a user is on redbus site",
+            "match": {
+              "location": "sprint2.StepDefinition.a_user_is_on_redbus_site()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 4,
+            "name": "user is booking one or more tickets",
+            "match": {
+              "location": "sprint2.StepDefinition.user_is_booking_one_or_more_tickets()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "user is filling passenger details form",
+            "match": {
+              "location": "sprint2.StepDefinition.user_is_filling_passenge_details_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "user clicks on a Proceed to pay button",
+            "match": {
+              "location": "sprint2.StepDefinition.user_clicks_on_a_proceed_to_pay_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "is on payment page",
+            "match": {
+              "location": "sprint2.StepDefinition.is_on_payment_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "user is entering the card details",
+            "match": {
+              "location": "sprint2.StepDefinition.user_is_entering_the_card_details()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "the user selects \"save card for future use\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"save card for future use\"",
+                  "offset": 17
+                }
+              ],
+              "location": "sprint2.StepDefinition.the_user_selects_button(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "the card details will be saved",
+            "match": {
+              "location": "sprint2.StepDefinition.the_card_details_will_be_saved()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Book a ticket",
+    "description": "",
+    "id": "book-a-ticket",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Features/Cards.feature",
+    "tags": []
+  }
+]

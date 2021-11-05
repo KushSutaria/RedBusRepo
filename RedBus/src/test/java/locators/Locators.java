@@ -40,6 +40,11 @@ final WebElement cbox_dropp=Locators.driver.findElement(By.xpath("//*[@id=\"1484
 return cbox_dropp;
 }
 
+public static WebElement passengerFormCrossbutton() {
+final WebElement cross=Locators.driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[5]/div[2]/span"));
+return cross;
+}
+
 public static WebElement fareDetails() {
 final WebElement fDButton=Locators.driver.findElement(By.xpath("//*[@id=\"14842887\"]/div[2]/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div[1]/div[2]/h3"));
 return fDButton;

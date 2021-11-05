@@ -3,6 +3,7 @@ Scenario: To verify that if the user doesn't pay the bill amount in the given ti
 Given a user is on redbus site
 And user is booking one or more tickets
 And user is filling passenger details form
+And user clicks on a Proceed to pay button
 And is on payment page
 When user doesn't book the ticket in the given time
 Then the session will timeout
